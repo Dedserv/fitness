@@ -1,0 +1,148 @@
+.contacts {
+  border-top: 1px solid $color-light-slate-grey;
+  flex: 1 1;
+
+  h2 {
+    font-weight: 600;
+    line-height: 65px;
+    margin: 0;
+    margin-bottom: 38px;
+
+    @include vp-1199 {
+      margin-bottom: 33px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.contacts__wrapper {
+  padding: 56px 159px 59px 0;
+  margin-right: auto;
+  margin-left: 120px;
+  max-width: 683px;
+
+  @include vp-1199 {
+    padding: 61px 179px 64px 133px;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 64px;
+  }
+}
+
+.contacts__list {
+  position: relative;
+  display: flex;
+  column-gap: 119px;
+  margin-left: 4px;
+  min-width: 360px;
+  max-width: 404px;
+
+  @include vp-1199 {
+    max-width: none;
+    column-gap: 96px;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    min-width: 240px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 87%;
+    top: 5px;
+    left: 57%;
+    background-color: $color-light-slate-grey;
+
+    @include vp-1199 {
+      left: 58%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts__location {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__contact {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+
+    @include vp-1199 {
+      margin-bottom: 22px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 19px;
+    }
+  }
+
+  span {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 3px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  a {
+    color: inherit;
+    font-size: 14px;
+    line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+}
