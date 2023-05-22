@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  z-index: -22;
+  z-index: 1;
   padding: 120px 0 106px;
 
   @include vp-1199 {
@@ -17,6 +17,8 @@
 
   @include vp-767 {
     flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
   }
 }
 
@@ -25,9 +27,19 @@
   background-color: $color-torch;
   color: $color-default-white;
   flex: 1 1;
+  overflow: auto;
+  max-height: 580px;
+  min-width: 440px;
 
   @include vp-1199 {
     padding: 51px 43px 50px;
+    max-height: 312px;
+    min-width: 292px;
+  }
+
+  @include vp-767 {
+    max-height: none;
+    overflow: hidden;
   }
 
   p {
@@ -150,6 +162,7 @@
 }
 
 .promo__time {
+  position: relative;
   margin-top: -5px;
 
   &::after {
@@ -183,9 +196,28 @@
 }
 
 .promo__image {
+  max-width: 660px;
+  min-width: 386px;
+
+  @include vp-1199 {
+    flex: 1 1;
+    max-width: 520px;
+    min-width: 386px;
+    max-height: 312px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    max-height: 100%;
+  }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @include vp-767 {
+      object-fit: contain;
+    }
   }
 }

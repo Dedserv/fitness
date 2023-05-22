@@ -79,7 +79,9 @@
                 <span>омск</span>
                 <div class="introducing__title">
                   <h1>Фитнес центр</h1>
-                  <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+                  <div class="introducing__description">
+                    <p>Тренажёрный зал Групповые занятия Кардио-зона</p>
+                  </div>
                 </div>
                 <a class="btn introducing__btn" href="#product"
                   >Купить абонемент</a
@@ -97,6 +99,15 @@
                   type="image/webp"
                 />
                 <source
+                  width="500"
+                  height="556"
+                  srcset="
+                    img/superman_desktop.jpg    1x,
+                    img/superman_desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
                   width="324"
                   height="390"
                   srcset="
@@ -106,21 +117,11 @@
                   media="(min-width: 768px)"
                   type="image/webp"
                 />
-                <source
+                <img
                   width="324"
                   height="390"
-                  srcset="
-                    img/superman_tablet.jpg    1x,
-                    img/superman_tablet@2x.jpg 2x
-                  "
-                  media="(min-width: 768px)"
-                />
-
-                <img
-                  width="500"
-                  height="556"
-                  src="img/superman_desktop.jpg"
-                  srcset="img/superman_desktop@2x.jpg 2x"
+                  src="img/superman_tablet.jpg"
+                  srcset="img/superman_tablet@2x.jpg 2x"
                   alt="Супермен"
                 />
               </picture>
@@ -248,7 +249,10 @@
                       />
                     </picture>
                   </div>
-                  <button class="about__video-button">
+                  <button
+                    aria-label="Воспроизвести видео"
+                    class="about__video-button"
+                  >
                     <svg width="17" height="17">
                       <use href="img/sprite.svg#play"></use>
                     </svg>

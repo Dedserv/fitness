@@ -2,7 +2,7 @@
   padding: 100px 0 116px;
 
   @include vp-1199 {
-    padding: 91px 0 93px;
+    padding: 91px 0 92px;
   }
 
   @include vp-767 {
@@ -23,7 +23,7 @@
       font-size: 42px;
       line-height: 50px;
       margin-right: 7px;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
 
     @include vp-767 {
@@ -45,7 +45,7 @@
 .promotions__content {
   display: flex;
   margin-right: 40px;
-  max-height: 462px;
+  max-height: 522px;
 
   img {
     height: 100%;
@@ -55,13 +55,15 @@
     @include vp-1199 {
       flex: 1 1;
       min-width: 399px;
-      max-height: 462px;
-      background-position: top;
+      max-height: 522px;
     }
 
     @include vp-767 {
       min-width: 290px;
       min-height: 299px;
+      max-width: none;
+      object-position: center top;
+      object-fit: cover;
     }
   }
 
@@ -75,6 +77,10 @@
     flex-direction: column;
     max-height: none;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -85,10 +91,15 @@
   padding: 33px 45px 45px;
   color: $color-default-white;
   background-color: $color-torch;
+  overflow: auto;
 
   @include vp-1199 {
     flex: 1 1;
     max-width: none;
+  }
+
+  @include vp-767 {
+    overflow: hidden;
   }
 
   span {
@@ -109,6 +120,7 @@
     margin: 0;
     font-size: 18px;
     line-height: 25px;
+    margin-bottom: 10px;
 
     @include vp-767 {
       margin-top: -5px;
@@ -132,7 +144,7 @@
     }
 
     @include vp-767 {
-      margin-top: 31px;
+      margin-top: 21px;
       align-self: center;
     }
   }

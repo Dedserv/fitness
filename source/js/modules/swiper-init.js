@@ -16,11 +16,18 @@ const initSwiper = () => {
         1280: {
           slidesPerView: 4,
           spaceBetween: 40,
+          initialSlide: 1,
         },
 
         920: {
           slidesPerView: 3,
           spaceBetween: 40,
+        },
+
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          initialSlide: 2,
         },
 
         580: {
@@ -33,6 +40,7 @@ const initSwiper = () => {
           centeredSlides: true,
           slidesPerView: 1,
           spaceBetween: 20,
+          initialSlide: 2,
         },
       },
     })

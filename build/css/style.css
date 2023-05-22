@@ -3299,7 +3299,7 @@ button,
 
 .promo {
   position: relative;
-  z-index: -22;
+  z-index: 1;
   padding: 120px 0 106px;
 }
 @media (max-width: 1199px) {
@@ -3324,6 +3324,8 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0 auto;
+    max-width: 500px;
   }
 }
 
@@ -3334,10 +3336,21 @@ button,
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
+  overflow: auto;
+  max-height: 580px;
+  min-width: 440px;
 }
 @media (max-width: 1199px) {
   .promo__content {
     padding: 51px 43px 50px;
+    max-height: 312px;
+    min-width: 292px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__content {
+    max-height: none;
+    overflow: hidden;
   }
 }
 .promo__content p {
@@ -3468,6 +3481,7 @@ button,
 }
 
 .promo__time {
+  position: relative;
   margin-top: -5px;
 }
 .promo__time::after {
@@ -3501,11 +3515,37 @@ button,
   }
 }
 
+.promo__image {
+  max-width: 660px;
+  min-width: 386px;
+}
+@media (max-width: 1199px) {
+  .promo__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+    max-width: 520px;
+    min-width: 386px;
+    max-height: 312px;
+  }
+}
+@media (max-width: 767px) {
+  .promo__image {
+    min-width: 290px;
+    max-height: 100%;
+  }
+}
 .promo__image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 767px) {
+  .promo__image img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 .header {
@@ -3722,27 +3762,30 @@ button,
     text-transform: none;
   }
 }
-.introducing__title p {
+
+.introducing__description {
   position: absolute;
   bottom: 37px;
   left: -86px;
-  font-size: 14px;
-  line-height: 21px;
-  color: #ffffff;
   max-width: 120px;
-  margin: 0;
 }
 @media (max-width: 1199px) {
-  .introducing__title p {
+  .introducing__description {
     bottom: 22px;
     left: -97px;
   }
 }
 @media (max-width: 767px) {
-  .introducing__title p {
+  .introducing__description {
     bottom: 32px;
     left: -63px;
   }
+}
+.introducing__description p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  margin: 0;
 }
 
 .introducing__btn {
@@ -4067,7 +4110,7 @@ button,
   z-index: -1;
   color: #e8e8e8;
   opacity: 0.48;
-  top: 50%;
+  top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -4195,7 +4238,7 @@ button,
 }
 @media (max-width: 1199px) {
   .promotions {
-    padding: 91px 0 93px;
+    padding: 91px 0 92px;
   }
 }
 @media (max-width: 767px) {
@@ -4218,7 +4261,7 @@ button,
     font-size: 42px;
     line-height: 50px;
     margin-right: 7px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 }
 @media (max-width: 767px) {
@@ -4248,7 +4291,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-right: 40px;
-  max-height: 462px;
+  max-height: 522px;
 }
 .promotions__content img {
   height: 100%;
@@ -4262,14 +4305,18 @@ button,
         -ms-flex: 1 1;
             flex: 1 1;
     min-width: 399px;
-    max-height: 462px;
-    background-position: top;
+    max-height: 522px;
   }
 }
 @media (max-width: 767px) {
   .promotions__content img {
     min-width: 290px;
     min-height: 299px;
+    max-width: none;
+    -o-object-position: center top;
+       object-position: center top;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media (max-width: 1199px) {
@@ -4287,6 +4334,10 @@ button,
             flex-direction: column;
     max-height: none;
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -4302,6 +4353,7 @@ button,
   padding: 33px 45px 45px;
   color: #ffffff;
   background-color: #ed0233;
+  overflow: auto;
 }
 @media (max-width: 1199px) {
   .promotions__content-inner {
@@ -4309,6 +4361,11 @@ button,
         -ms-flex: 1 1;
             flex: 1 1;
     max-width: none;
+  }
+}
+@media (max-width: 767px) {
+  .promotions__content-inner {
+    overflow: hidden;
   }
 }
 .promotions__content-inner span {
@@ -4327,6 +4384,7 @@ button,
   margin: 0;
   font-size: 18px;
   line-height: 25px;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .promotions__content-inner p {
@@ -4358,7 +4416,7 @@ button,
 }
 @media (max-width: 767px) {
   .promotions__content-inner a {
-    margin-top: 31px;
+    margin-top: 21px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;

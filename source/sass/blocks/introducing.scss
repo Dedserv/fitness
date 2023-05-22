@@ -108,26 +108,29 @@
       text-transform: none;
     }
   }
+}
+
+.introducing__description {
+  position: absolute;
+  bottom: 37px;
+  left: -86px;
+  max-width: 120px;
+
+  @include vp-1199 {
+    bottom: 22px;
+    left: -97px;
+  }
+
+  @include vp-767 {
+    bottom: 32px;
+    left: -63px;
+  }
 
   p {
-    position: absolute;
-    bottom: 37px;
-    left: -86px;
     font-size: 14px;
     line-height: 21px;
     color: $color-default-white;
-    max-width: 120px;
     margin: 0;
-
-    @include vp-1199 {
-      bottom: 22px;
-      left: -97px;
-    }
-
-    @include vp-767 {
-      bottom: 32px;
-      left: -63px;
-    }
   }
 }
 
