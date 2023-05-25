@@ -19,7 +19,7 @@
 }
 
 .contacts__wrapper {
-  padding: 56px 159px 59px 0;
+  padding: 56px 109px 65px 0;
   margin-right: auto;
   margin-left: 120px;
   max-width: 683px;
@@ -91,6 +91,9 @@
 }
 
 .contacts__item {
+  display: flex;
+  flex-direction: column;
+
   &:not(:last-child) {
     margin-bottom: 16px;
 

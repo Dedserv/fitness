@@ -6,41 +6,32 @@ const initSwiper = () => {
   if (swiper) {
     (() => new Swiper('.swiper', {
       loop: true,
+      direction: 'horizontal',
 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
 
+      maxBackfaceHiddenSlides: 0,
+
       breakpoints: {
-        1280: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-          initialSlide: 1,
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
         },
-
-        920: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-
         768: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 30,
-          initialSlide: 2,
         },
-
-        580: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          centeredSlides: false,
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
         },
-
-        320: {
-          centeredSlides: true,
-          slidesPerView: 1,
-          spaceBetween: 20,
-          initialSlide: 2,
+        1310: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
         },
       },
     })
