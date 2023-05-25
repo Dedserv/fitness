@@ -2264,7 +2264,7 @@ button,
   content: "";
   top: -14px;
   left: -14px;
-  background-image: url("/../../img/svg/circle.svg");
+  background-image: url("../img/svg/circle.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100px;
