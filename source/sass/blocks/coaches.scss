@@ -111,6 +111,27 @@
     }
   }
 
+  &:focus {
+    .coaches__content {
+      background-color: rgba(16, 38, 84, 0.89);
+      display: block;
+      max-height: inherit;
+      padding-top: 51px;
+      overflow: auto;
+      scrollbar-width: none;
+
+      @include vp-1199 {
+        padding-top: 41px;
+        padding-right: 33px;
+      }
+    }
+
+    .coaches__content-inner {
+      display: block;
+      transform: translateY(-4px);
+    }
+  }
+
   @include vp-1199 {
     max-width: 268px;
   }

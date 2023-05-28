@@ -1,31 +1,30 @@
 .header {
-  position: absolute;
-  top: 30px;
-  width: 100%;
-
-  @include vp-1199 {
-    top: 40px;
-  }
-
-  @include vp-767 {
-    top: 15px;
-  }
-}
-
-.header__wrapper {
+  position: relative;
+  z-index: 10;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   align-items: flex-start;
+  padding-top: 10px;
+
+  @include vp-1199 {
+    padding-top: 40px;
+  }
 
   @include vp-767 {
+    padding-top: 15px;
     gap: 10px;
+    justify-content: flex-end;
   }
 }
 
 .header__logotype {
+  @include vp-767 {
+    flex: 1 1;
+    min-width: 69px;
+  }
+
   a {
     display: block;
     padding: 10px 0;
@@ -55,6 +54,23 @@
 }
 
 .header__phone {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px;
+  max-width: 800px;
+  margin-left: auto;
+
+  @include vp-1199 {
+    max-width: 80%;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    flex: 1 1;
+    min-width: 120px;
+  }
+
   a {
     font-family: $ff-alumni-sans;
     font-weight: 600;
@@ -69,7 +85,7 @@
     @include vp-1199 {
       font-weight: 700;
       font-size: 24px;
-      line-height: 0;
+      line-height: 18px;
       letter-spacing: 0.02em;
     }
 

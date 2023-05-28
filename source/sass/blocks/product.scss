@@ -146,6 +146,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 
   @include vp-1199 {
     flex-direction: column;
@@ -164,12 +165,13 @@
   display: flex;
   flex: 1 1;
   width: 100%;
-  max-width: 360px;
+  // max-width: 360px;
   min-width: 298px;
+  max-width: 33%;
   flex-direction: column;
   box-sizing: border-box;
   background-color: $color-default-white;
-  padding: 54px 69px 58px;
+  padding: 54px 59px 58px;
   z-index: 2;
   border: 7px solid transparent;
   border-image: linear-gradient(transparent, transparent);
@@ -286,8 +288,12 @@
   color: $color-sapphire;
   border: 2px solid $color-sapphire;
   padding: 26px 43px 25px 44px;
+  max-width: 208px;
+  margin: 0 auto;
 
   @include vp-1199 {
+    max-width: 100%;
+    margin: 0;
     padding: 26px 43px 27px 44px;
   }
 

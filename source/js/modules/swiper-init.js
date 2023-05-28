@@ -21,6 +21,7 @@ const initSwiper = () => {
           slidesPerGroup: 1,
         },
         768: {
+          initialSlide: 2,
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 30,
